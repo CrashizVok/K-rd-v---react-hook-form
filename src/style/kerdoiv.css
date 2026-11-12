@@ -1,0 +1,187 @@
+/* kerdoiv.css */
+
+:root {
+  --szin-elsodleges: #4f46e5;
+  --szin-elsodleges-hover: #4338ca;
+  --szin-hatter: #f8fafc;
+  --szin-kartya: #ffffff;
+  --szin-szoveg: #1e293b;
+  --szin-halvany: #64748b;
+  --szin-hiba: #dc2626;
+  --szin-siker: #16a34a;
+  --szin-hatar: #e2e8f0;
+  --radius: 10px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  background: var(--szin-hatter);
+  color: var(--szin-szoveg);
+  line-height: 1.5;
+}
+
+/* --- A form kártya --- */
+form {
+  max-width: 560px;
+  margin: 3rem auto;
+  padding: 2rem;
+  background: var(--szin-kartya);
+  border-radius: var(--radius);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+}
+
+form h2 {
+  margin: 0 0 1.5rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+/* --- Fieldset csoportok --- */
+fieldset {
+  border: none;
+  padding: 0;
+  margin: 0 0 1.75rem;
+}
+
+fieldset:last-of-type {
+  margin-bottom: 1rem;
+}
+
+legend {
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--szin-halvany);
+  margin-bottom: 1rem;
+}
+
+/* --- Mezők --- */
+form > fieldset > div,
+.kerdes {
+  margin-bottom: 1.1rem;
+}
+
+label {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-bottom: 0.35rem;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"] {
+  width: 100%;
+  padding: 0.6rem 0.75rem;
+  font-size: 1rem;
+  border: 1px solid var(--szin-hatar);
+  border-radius: 8px;
+  background: #fff;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="number"]:focus {
+  outline: none;
+  border-color: var(--szin-elsodleges);
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.15);
+}
+
+/* --- Kérdés blokk --- */
+.kerdes {
+  padding: 1rem;
+  border: 1px solid var(--szin-hatar);
+  border-radius: 8px;
+  background: #fbfcfe;
+}
+
+.kerdes > p {
+  margin: 0 0 0.75rem;
+  font-weight: 500;
+}
+
+/* --- Radio gombok --- */
+.kerdes label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-right: 1.25rem;
+  margin-bottom: 0;
+  cursor: pointer;
+  font-weight: 400;
+}
+
+input[type="radio"] {
+  width: 1.05rem;
+  height: 1.05rem;
+  accent-color: var(--szin-elsodleges);
+  cursor: pointer;
+}
+
+/* --- Hibaüzenet --- */
+.hiba {
+  color: var(--szin-hiba);
+  font-size: 0.85rem;
+  margin: 0.35rem 0 0;
+}
+
+/* --- Sikerüzenet --- */
+.siker {
+  color: var(--szin-siker);
+  font-weight: 600;
+  margin-top: 1rem;
+}
+
+/* --- Gomb --- */
+button[type="submit"] {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+  background: var(--szin-elsodleges);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.15s, transform 0.05s;
+}
+
+button[type="submit"]:hover:not(:disabled) {
+  background: var(--szin-elsodleges-hover);
+}
+
+button[type="submit"]:active:not(:disabled) {
+  transform: translateY(1px);
+}
+
+button[type="submit"]:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* --- Összegzés --- */
+details {
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--szin-hatar);
+}
+
+summary {
+  cursor: pointer;
+  font-weight: 600;
+  color: var(--szin-halvany);
+}
+
+details ul {
+  margin: 0.75rem 0 0;
+  padding-left: 1.25rem;
+  font-size: 0.9rem;
+  color: var(--szin-halvany);
+}
